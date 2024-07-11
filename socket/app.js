@@ -2,7 +2,8 @@ import { Server } from "socket.io";
 
 const io = new Server({
   cors: {
-    origin: "https://rentify-self.vercel.app/",
+    origin:
+      "https://rentify-18ukt9gu5-anshul-kumar-godiwars-projects.vercel.app/",
   },
 });
 
