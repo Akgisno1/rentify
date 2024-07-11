@@ -1,0 +1,226 @@
+@import "../../responsive.scss";
+
+.singlePage {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  @include md {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .details {
+    width: 60%;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 50px;
+      overflow-y: visible;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+      padding: 20px 20px 20px 20px;
+      gap: 20px;
+
+      .top {
+        width: 100%;
+        gap: 20px;
+
+        display: flex;
+        flex-direction: row;
+
+        @include sm {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .post {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h1 {
+            font-weight: 400;
+          }
+          .address {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            color: #888;
+            font-size: 14px;
+
+            img {
+              width: 16px;
+              height: 16px;
+            }
+          }
+          .price {
+            padding: 5px;
+            color: white;
+            background-color: #cd2727;
+            border-radius: 5px;
+            width: max-content;
+            font-size: 20px;
+            font-weight: 700;
+          }
+        }
+        .user {
+          display: flex;
+          padding: 10px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          color: white;
+          border-radius: 27px;
+          background-color: #cd2727;
+          font-weight: bold;
+
+          @include sm {
+            padding: 20px 50px;
+          }
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+        }
+      }
+      .bottom {
+        color: #888;
+        line-height: 20px;
+      }
+    }
+  }
+  .features {
+    background-color: #414141;
+
+    width: 40%;
+    height: 100%;
+    overflow-y: scroll;
+
+    @include md {
+      width: 100%;
+      height: max-content;
+      overflow-y: visible;
+    }
+
+    .wrapper {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          background-color: rgba(254, 205, 81, 0.209);
+        }
+
+        .featureText {
+          span {
+            font-weight: bold;
+          }
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      .listHorizontal {
+        display: flex;
+        width: 90%;
+
+        height: 54px;
+        border-radius: 27px;
+        justify-content: space-around;
+        padding: 20px 10px;
+        background-color: white;
+        color: #888;
+      }
+
+      .sizes {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 3%;
+
+        @include lg {
+          font-size: 12px;
+        }
+
+        .size {
+          display: flex;
+          height: 54px;
+          border-radius: 27px;
+          align-items: center;
+          justify-content: center;
+
+          font-weight: bold;
+          font-size: 15px;
+          gap: 10px;
+          width: 28%;
+          background-color: white;
+          padding: 10px;
+        }
+      }
+
+      .mapContainer {
+        display: flex;
+        justify-content: center;
+        height: 200px;
+        width: 100%;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 10%;
+
+        button {
+          padding: 20px;
+          height: 54px;
+          width: 40%;
+          display: flex;
+          align-items: center;
+          color: white;
+          gap: 10px;
+          font-weight: bold;
+          font-size: 15px;
+          background-color: #cd2727;
+          border-radius: 27px;
+          cursor: pointer;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}

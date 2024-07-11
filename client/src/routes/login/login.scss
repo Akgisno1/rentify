@@ -1,0 +1,82 @@
+@import "../../responsive.scss";
+.login {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    @include md {
+      backdrop-filter: blur(5px);
+
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input {
+        padding: 20px;
+        border: 1px solid gray;
+        border-radius: 5px;
+      }
+
+      button {
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #cd2727;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:disabled {
+          background-color: #bed9d8;
+          cursor: not-allowed;
+        }
+      }
+
+      span {
+        color: rgba(255, 0, 0, 0.591);
+      }
+
+      a {
+        font-size: 14px;
+        color: gray;
+        border-bottom: 1px solid gray;
+        width: max-content;
+      }
+    }
+  }
+
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: #f7c6c5;
+
+    @include md {
+      position: absolute;
+      z-index: -5;
+      width: 100%;
+      background-color: white;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

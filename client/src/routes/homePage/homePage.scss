@@ -1,0 +1,88 @@
+@import "../../responsive.scss";
+
+.homePage {
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+
+    @include md {
+      backdrop-filter: blur(5px);
+
+      width: 100%;
+    }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+      height: 100%;
+
+      .title {
+        font-size: 70px;
+        font-family: "Courier New", Courier, monospace;
+        text-decoration: underline;
+      }
+      .desc {
+        margin-top: 30px;
+        font-size: 30px;
+        @include sm {
+          display: none;
+        }
+      }
+
+      .boxes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include sm {
+          display: none;
+        }
+
+        h1 {
+          font-size: 36px;
+
+          @include lg {
+            font-size: 32px;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(150, 150, 150, 0.5);
+
+    @include md {
+      position: absolute;
+      z-index: -5;
+      width: 100%;
+      background-color: white;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
