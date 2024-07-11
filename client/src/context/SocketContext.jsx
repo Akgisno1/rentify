@@ -9,11 +9,15 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("http://localhost:4000"));
+    setSocket(
+      io(
+        "https://rentifysocket-e7ko98qi4-anshul-kumar-godiwars-projects.vercel.app/"
+      )
+    );
   }, []);
 
   useEffect(() => {
-  currentUser && socket?.emit("newUser", currentUser.id);
+    currentUser && socket?.emit("newUser", currentUser.id);
   }, [currentUser, socket]);
 
   return (
