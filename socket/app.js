@@ -38,3 +38,7 @@ io.on("connection", (socket) => {
     removeUser(socket.id);
   });
 });
+
+io.listen(
+  "https://rentifysocket-k8und0xxv-anshul-kumar-godiwars-projects.vercel.app"
+);

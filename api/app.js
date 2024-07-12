@@ -20,3 +20,10 @@ app.use("/api/posts", postRoute);
 app.use("/api/test", testRoute);
 app.use("/api/chats", chatRoute);
 app.use("/api/messages", messageRoute);
+
+app.listen(
+  "https://rentifyapi-c3263bk9n-anshul-kumar-godiwars-projects.vercel.app",
+  () => {
+    console.log("Server is running!");
+  }
+);
