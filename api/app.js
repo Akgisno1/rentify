@@ -20,7 +20,3 @@ app.use("/api/posts", postRoute);
 app.use("/api/test", testRoute);
 app.use("/api/chats", chatRoute);
 app.use("/api/messages", messageRoute);
-
-app.listen(8800, () => {
-  console.log("Server is running!");
-});
