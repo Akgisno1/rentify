@@ -11,7 +11,7 @@ export const SocketContextProvider = ({ children }) => {
   useEffect(() => {
     setSocket(
       io(
-        "https://rentifysocket-k8und0xxv-anshul-kumar-godiwars-projects.vercel.app/"
+        "https://rentifysocket-k8und0xxv-anshul-kumar-godiwars-projects.vercel.app"
       )
     );
   }, []);
