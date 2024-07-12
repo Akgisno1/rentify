@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiRequest = axios.create({
-  baseURL: "https://rentifysocket.onrender.com",
+  baseURL: "https://rentifyapi-4wih.onrender.com",
   withCredentials: true,
 });
 
