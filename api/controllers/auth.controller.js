@@ -59,22 +59,19 @@ export const login = async (req, res) => {
         id: user.id,
         isAdmin: false,
       },
-      process.env.JWT_SECRET_KEY
-      // { expiresIn: age }
+      process.env.JWT_SECRET_KEY,
+      { expiresIn: age }
     );
 
     const { password: userPassword, ...userInfo } = user;
 
     res
-      .cookie(
-        "token",
-        token
-        //    {
-        //   httpOnly: true,
-        //   secure: true,
-        //   maxAge: age,
-        // }
-      )
+      .cookie("token", token, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "None",
+        maxAge: age,
+      })
       .status(200)
       .json(userInfo);
   } catch (err) {
