@@ -46,12 +46,8 @@ nav {
       }
 
       span {
-        @include md {
-          display: none;
-        }
-
         @include sm {
-          display: initial;
+          display: none;
         }
       }
     }
